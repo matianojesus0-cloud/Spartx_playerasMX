@@ -1,70 +1,93 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Playeras Spartan MX</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: white;
-    }
-    header {
-      text-align: center;
-      padding: 20px;
-    }
-    .contenedor {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 15px;
-      padding: 15px;
-    }
-    .card {
-      background: #020617;
-      border-radius: 15px;
-      padding: 10px;
-      text-align: center;
-    }
-    .card img {
-      width: 100%;
-      border-radius: 12px;
-    }
-    .precio {
-      color: #22d3ee;
-      font-weight: bold;
-    }
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: white;
-      padding: 12px 18px;
-      border-radius: 50px;
-      text-decoration: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spartan MX | Playeras al Mayoreo</title>
+    <style>
+        :root {
+            --principal: #d32f2f; /* Rojo deportivo */
+            --oscuro: #1a1a1a;
+            --blanco: #ffffff;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f0f0f0; color: #333; }
+        header { background-color: var(--oscuro); color: var(--blanco); padding: 40px 20px; text-align: center; border-bottom: 5px solid var(--principal); }
+        .logo-text { font-size: 3rem; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; margin: 0; }
+        .subtitle { font-size: 1.2rem; color: #ccc; }
+        
+        .container { max-width: 900px; margin: 30px auto; padding: 20px; background: var(--blanco); border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        
+        h2 { border-left: 5px solid var(--principal); padding-left: 15px; color: var(--oscuro); }
+
+        /* Estilo de la Tabla */
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th { background-color: var(--oscuro); color: white; padding: 15px; text-align: left; }
+        td { padding: 12px; border-bottom: 1px solid #ddd; }
+        tr:hover { background-color: #f9f9f9; }
+
+        .btn-contacto {
+            display: inline-block;
+            background-color: var(--principal);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: transform 0.2s;
+        }
+        .btn-contacto:hover { transform: scale(1.05); }
+        
+        footer { text-align: center; padding: 20px; font-size: 0.9rem; color: #666; }
+    </style>
 </head>
 <body>
 
 <header>
-  <h1>Playeras Spartan MX</h1>
-  <p>Paquetes a mayoreo 🇲🇽</p>
+    <div class="logo-text">SPARTAN MX</div>
+    <div class="subtitle">Equipamiento Deportivo y Playeras al Mayoreo 🇲🇽</div>
 </header>
 
-<div class="contenedor">
-  <div class="card">
-    <img src="https://via.placeholder.com/300">
-    <h3>Playera Negra</h3>
-    <p class="precio">$199</p>
-  </div>
+<div class="container">
+    <h2>Paquetes a Mayoreo 📦</h2>
+    <p>Ofrecemos la mejor calidad en uniformes y playeras para equipos de Spartan MX. Consulta nuestros precios especiales:</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Cantidad</th>
+                <th>Descripción</th>
+                <th>Precio Unitario</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>12 - 24 piezas</td>
+                <td>Playera técnica estándar</td>
+                <td>$150 MXN</td>
+            </tr>
+            <tr>
+                <td>25 - 50 piezas</td>
+                <td>Playera técnica + logo impreso</td>
+                <td>$135 MXN</td>
+            </tr>
+            <tr>
+                <td>50+ piezas</td>
+                <td>Paquete Premium Personalizado</td>
+                <td>$120 MXN</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="text-align: center;">
+        <p>¿Necesitas una cotización personalizada?</p>
+        <a href="#" class="btn-contacto">Contactar por WhatsApp</a>
+    </div>
 </div>
 
-<a class="whatsapp" href="https://wa.me/521TU_NUMERO" target="_blank">
-  WhatsApp
-</a>
+<footer>
+    <p>&copy; 2026 Spartan MX - Distribuidora de Ropa Deportiva</p>
+</footer>
 
 </body>
 </html>
