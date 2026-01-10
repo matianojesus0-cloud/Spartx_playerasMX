@@ -3,91 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spartan MX | Playeras al Mayoreo</title>
+    <title>Spartan MX | Calidad Deportiva</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --principal: #d32f2f; /* Rojo deportivo */
-            --oscuro: #1a1a1a;
-            --blanco: #ffffff;
+            --rojo-spartan: #e63946;
+            --negro-profundo: #1a1a1a;
+            --gris-claro: #f4f4f4;
+            --whatsapp-green: #25d366;
         }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f0f0f0; color: #333; }
-        header { background-color: var(--oscuro); color: var(--blanco); padding: 40px 20px; text-align: center; border-bottom: 5px solid var(--principal); }
-        .logo-text { font-size: 3rem; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; margin: 0; }
-        .subtitle { font-size: 1.2rem; color: #ccc; }
-        
-        .container { max-width: 900px; margin: 30px auto; padding: 20px; background: var(--blanco); border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        
-        h2 { border-left: 5px solid var(--principal); padding-left: 15px; color: var(--oscuro); }
 
-        /* Estilo de la Tabla */
-        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-        th { background-color: var(--oscuro); color: white; padding: 15px; text-align: left; }
-        td { padding: 12px; border-bottom: 1px solid #ddd; }
-        tr:hover { background-color: #f9f9f9; }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--gris-claro);
+            color: #333;
+        }
 
-        .btn-contacto {
-            display: inline-block;
-            background-color: var(--principal);
+        /* Encabezado Impactante */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                        url('https://images.unsplash.com/photo-1517649763962-0c6234278a0b?auto=format&fit=crop&q=80&w=1000');
+            background-size: cover;
+            background-position: center;
             color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            margin-top: 20px;
-            transition: transform 0.2s;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 6px solid var(--rojo-spartan);
         }
-        .btn-contacto:hover { transform: scale(1.05); }
-        
-        footer { text-align: center; padding: 20px; font-size: 0.9rem; color: #666; }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Contenedor Principal */
+        .container {
+            max-width: 1000px;
+            margin: -40px auto 40px;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: var(--negro-profundo);
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        /* Tabla de Precios Estilizada */
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        th {
+            background-color: var(--negro-profundo);
+            color: white;
+            padding: 18px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            text-align: center;
+        }
+
+        tr:nth-child(even) { background-color: #f9f9f9; }
+
+        .price-tag {
+            color: var(--rojo-spartan);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Botón de WhatsApp Flotante */
+        .wsp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: var(--whatsapp-green);
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .wsp-float:hover {
+            transform: scale(1.1);
+            background-color: #128c7e;
+        }
+
+        /* Pie de página */
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: var(--negro-profundo);
+            color: white;
+            margin-top: 50px;
+        }
+
+        /* Ajustes para Celular */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2.2rem; }
+            .container { margin: 10px; padding: 20px; }
+            .wsp-float { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 25px; }
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="logo-text">SPARTAN MX</div>
-    <div class="subtitle">Equipamiento Deportivo y Playeras al Mayoreo 🇲🇽</div>
-</header>
+    <a href="https://wa.me/527671071875?text=Hola,%20me%20interesan%20los%20paquetes%20de%20Spartan%20MX" class="wsp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-<div class="container">
-    <h2>Paquetes a Mayoreo 📦</h2>
-    <p>Ofrecemos la mejor calidad en uniformes y playeras para equipos de Spartan MX. Consulta nuestros precios especiales:</p>
-    
-    <table>
-        <thead>
-            <tr>
-                <th>Cantidad</th>
-                <th>Descripción</th>
-                <th>Precio Unitario</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>12 - 24 piezas</td>
-                <td>Playera técnica estándar</td>
-                <td>$150 MXN</td>
-            </tr>
-            <tr>
-                <td>25 - 50 piezas</td>
-                <td>Playera técnica + logo impreso</td>
-                <td>$135 MXN</td>
-            </tr>
-            <tr>
-                <td>50+ piezas</td>
-                <td>Paquete Premium Personalizado</td>
-                <td>$120 MXN</td>
-            </tr>
-        </tbody>
-    </table>
+    <header>
+        <h1>SPARTAN MX</h1>
+        <p>Dominando el juego con estilo y resistencia</p>
+    </header>
 
-    <div style="text-align: center;">
-        <p>¿Necesitas una cotización personalizada?</p>
-        <a href="#" class="btn-contacto">Contactar por WhatsApp</a>
+    <div class="container">
+        <h2>📦 Catálogo de Mayoreo</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Paquete</th>
+                        <th>Beneficios</th>
+                        <th>Precio Unitario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Bronce (12-24 pzs)</b></td>
+                        <td>Tela Dry-Fit + Envío gratis</td>
+                        <td class="price-tag">$300 MXN</td>
+                    </tr>
+                    <tr>
+                        <td><b>Plata (25-50 pzs)</b></td>
+                        <td>Personalización básica + Logo</td>
+                        <td class="price-tag">$135 MXN</td>
+                    </tr>
+                    <tr>
+                        <td><b>Spartan Gold (50+ pzs)</b></td>
+                        <td>Diseño Pro + Etiquetas personalizadas</td>
+                        <td class="price-tag">$115 MXN</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <p style="font-style: italic; color: #666;">* Precios sujetos a cambios según diseño.</p>
+        </div>
     </div>
-</div>
 
-<footer>
-    <p>&copy; 2026 Spartan MX - Distribuidora de Ropa Deportiva</p>
-</footer>
+    <footer>
+        <p><b>Spartan MX 🇲🇽</b></p>
+        <p>Venta exclusiva de artículos deportivos de alta gama.</p>
+        <p style="font-size: 0.8rem; opacity: 0.6;">&copy; 2026 Todos los derechos reservados.</p>
+    </footer>
 
 </body>
 </html>
